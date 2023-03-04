@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<title>phone - Shodan Search</title>
+
+<meta charset="utf-8">
+
+<meta name="description" content="Search Engine for the Internet of Things">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://wire.shodan.io/v2.5.0/default/css/wire.css" media="(prefers-color-scheme: light)" rel="stylesheet" />
+
+<link href="https://wire.shodan.io/v2.5.0/dark/css/wire.css" media="(prefers-color-scheme: dark)" rel="stylesheet" />
+
+<link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon">
+
+<link rel="apple-touch-icon" href="/static/img/apple-touch-icon-192.png">
+
+<link rel="search" href="/static/opensearch.xml" type="application/opensearchdescription+xml" title="Shodan">
+
+<script defer src="https://kit.fontawesome.com/b7e79643d9.js" crossorigin="anonymous"></script>
+
+<meta name="twitter:card" content="summary_large_image" />
+
+<meta name="twitter:site" content="@shodanhq" />
+
+<meta name="twitter:creator" content="@achillean" />
+
+<meta name="twitter:title" content="Shodan Search" />
+
+<meta name="twitter:image" content="http://www.shodan.io/search/report.png?query=phone" />
+
+<meta property="og:type" content="website" />
+
+<meta property="og:title" content="Shodan Search" />
+
+<meta property="og:image" content="http://www.shodan.io/search/report.png?query=phone" />
+
+<meta property="og:image:width" content="1200" />
+
+<meta property="og:image:height" content="630" />
+
+<meta name="twitter:description" content="213,256 results found for search query: phone" />
+
+<meta property="og:description" content="213,256 results found for search query: phone" />
+
+<style>.tile-ssl ul {
+
+    margin: 0 0 0 5px;
+
+    padding: 0;
+
+}
+
+
+
+.tile-ssl li > span {
+
+    display: block;
+
+}
+
+</style>
+
+<link rel="stylesheet" href="/static/jquery/jquery-jvectormap-1.2.2.css" />
+
+<style>.jvectormap-zoomout,
+
+.jvectormap-zoomin {
+
+    display: none;
+
+}
+
+</style>
+
+<style>.justify-content-between {
+
+    justify-content: space-between;
+
+}
+
+.crop-text {
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+
+}
+
+.l-search-results {
+
+    font-family: Arial;
+
+    overflow: hidden;
+
+}
+
+
+
+.l-search-results .result {
+
+    padding-bottom: 20px;
+
+}
+
+
+
+.l-search-results .result .timestamp {
+
+    height: 28px;
+
+    line-height: 28px;
+
+}
+
+
+
+.l-search-results .result-details {
+
+    line-height: 1.2;
+
+    font-size: 1.1rem;
+
+}
+
+
+
+.l-search-results .result-details ul {
+
+    padding: 0;
+
+    margin-bottom: 1.5rem;
+
+}
+
+
+
+.l-search-results .result-details li {
+
+    margin-bottom: 3px;
+
+}
+
+
+
+.l-search-results .result-details li.components {
+
+    padding-top: 6px;
+
+}
+
+
+
+.l-search-results .result .columns {
+
+    padding: 0;
+
+}
+
+
+
+.l-search-results .result .hostnames{
+
+    word-break: break-all;
+
+}
+
+
+
+.l-search-results .result pre {
+
+    margin-top: 0;
+
+    overflow: hidden;
+
+}
+
+
+
+.l-search-results .result .flag {
+
+    margin-right: 4px;
+
+    vertical-align: text-bottom;
+
+}
+
+
+
+.pagination {
+
+    margin: 20px 0 0 0;
+
+}
+
+
+
+.http-tech {
+
+    display: inline-block;
+
+    margin-right: 10px;
+
+}
+
+
+
+img.screenshot {
+
+    width: 100%;
+
+}
+
+
+
+.tile {
+
+    font-size: 1.1rem;
+
+}
+
+
+
+.tile h1 {
+
+    font-size: 1.4rem;
+
+    margin-bottom: 5px;
+
+}
+
+
+
+#worldmap {
+
+    height: 120px;
+
+    padding: 8px 0;
+
+}
+
+
+
+#shodan-links a {
+
+    display: inline-block;
+
+    margin: 0 10px 10px 0;
+
+    padding: 4px 2px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="quickbar">
+
+<ul>
+
+<li><a href="https://www.shodan.io">Shodan</a>
+
+</li>
+
+<li><a href="https://maps.shodan.io">Maps</a>
+
+</li>
+
+<li><a href="https://images.shodan.io">Images</a>
+
+</li>
+
+<li><a href="https://monitor.shodan.io">Monitor</a>
+
+</li>
+
+<li><a href="https://developer.shodan.io">Developer</a>
+
+</li>
+
+<li><a href="https://www.shodan.io/about/products">More...</a>
+
+</li>
+
+<li><a href="http://www.FACЕBOOK.com">facebook</a>
+
+</li>
+
+</ul>
+
+</div>
+
+<div class="container u-full-width">
+
+<div class="row">
+
+<div class="twelve columns">
+
+<style>.searchbox {
+
+    font-family: Arial;
+
+}
+
+
+
+.visually-hidden {
+
+    border: 0;
+
+    clip: rect(0 0 0 0);
+
+    height: 1px;
+
+    margin: -1px;
+
+    overflow: hidden;
+
+    padding: 0;
+
+    position: absolute;
+
+    width: 1px;
+
+}
+
+
+
+@media (max-width: 900px) {
+
+    .right-menu .menu-item-account {
+
+        display: none
+
+    }
+
+}
+
+</style>
+
+<div class="navbar">
+
+<input id="menu-btn" type="checkbox" class="menu-btn" />
+
+<label for="menu-btn" class="menu-icon"><span class="navicon"><i class="fa fa-bars  fa-fw "></i></span>
+
+</label><a href="/" class="title"><img src="/static/img/logo.png" alt="Shodan" width="112" height="32" /></a>
+
+<ul class="menu sub-menu">
+
+<li><a href="/explore"><i class="fas fa-globe  fa-fw "></i>Explore</a>
+
+</li>
+
+<li><a href="https://account.shodan.io/billing" target="_blank" rel="noopener noreferrer"><i class="fas fa-briefcase  fa-fw "></i>Pricing
+
+<i style="font-size: 1.1rem" class="fa fa-external-link  fa-fw "></i></a>
+
+</li>
+
+</ul>
+
+<form action="/search" method="GET">
+
+<div class="searchbox">
+
+<div class="input-wrapper">
+
+<label for="search-query" value="Enter search query" class="visually-hidden"></label>
+
+<input type="text" name="query" placeholder="Search..." value="phone" autofocus="autofocus" autocapitalize="none" id="search-query" />
+
+</div>
+
+<button type="submit" aria-label="Submit search querxy" data-balloon-disable="data-balloon-disable" class="button-red"><i class="fas fa-search  fa-fw "></i>
+
+</button>
+
+</div>
+
+</form>
+
+<ul class="menu main-menu right-menu">
+
+<li><a href="/dashboard" class="highlight-success">Login</a>
+
+</li>
+
+</ul>
+
+</div>
+
+<script>(function() {
+
+    let $menuBtn = document.getElementById('menu-btn')
+
+    document.body.addEventListener('click', function(e) {
+
+        // Only check when the menu is open
+
+        if (!$menuBtn.checked) {
+
+            return
+
+        }
+
+
+
+        let elm = e.target
+
+        let showMenu = false
+
+        while (elm) {
+
+            // Ignore duplicated event
+
+            if (elm.classList.contains('menu-icon')) {
+
+                return
+
+            }
+
+
+
+            // Toggle menu when clicking on the menu icon
+
+            if (elm.id == 'menu-btn') {
+
+                showMenu = true
+
+                break
+
+            }
+
+            elm = elm.parentElement
+
+        }
+
+
+
+        $menuBtn.checked = showMenu
+
+    })
+
+})()
+
+</script>
+
+<div class="container">
+
+</div>
+
+</div>
+
+</div>
+
+</div><br />
+
+<div class="container u-full-width card card-padding">
+
+<div class="row l-search-results">
+
+<div class="three columns summary">
+
+<h6>Total Results</h6>
+
+<h4>213,256</h4>
+
+<h6>Top Countries</h6>
+
+<div id="worldmap"></div>
+
+<ul>
+
+<li class="normalize flex justify-content-between"><a href="/search?query=phone+country%3A%22IT%22" class="crop-text text-dark">Italy</a><span class="u-pull-right">192,371</span>
+
+</li>
+
+<li class="normalize flex justify-content-between"><a href="/search?query=phone+country%3A%22US%22" class="crop-text text-dark">United States</a><span class="u-pull-right">3,270</span>
+
+</li>
+
+<li class="normalize flex justify-content-between"><a href="/search?query=phone+country%3A%22CN%22" class="crop-text text-dark">China</a><span class="u-pull-right">2,352</span>
+
+</li>
+
+<li class="normalize flex justify-content-between"><a href="/search?query=phone+country%3A%22MY%22" class="crop-text text-dark">Malaysia</a><span class="u-pull-right">1,433</span>
+
+</li>
+
+<li class="normalize flex justify-content-between"><a href="/search?query=phone+country%3A%22BR%22" class="crop-text text-dark">Brazil</a><span class="u-pull-right">1,409</span>
+
+</li>
+
+<li><a href="/search/facet?query=phone&amp;facet=country">More...</a>
+
+</li>
+
+</ul>
+
+<h6>Top Ports</h6>
+
+<ul>
+
+<li class="normalize flex justify-content-between"><a href="/search?query=phone+port%3A5060" class="crop-text text-dark">5060</a><span class="u-pull-right">193,228</span>
+
+</li>
+
+<li class="normalize flex justify-content-between"><a href="/search?query=phone+port%3A443" class="crop-text text-dark">443</a><span class="u-pull-right">4,684</span>
+
+</li>
+
+<li class="normalize flex justify-content-between"><a href="/search?query=phone+port%3A8081" class="crop-text text-dark">8081</a><span class="u-pull-right">3,662</span>
+
+</li>
+
+<li class="normalize flex justify-content-between"><a href="/search?query=phone+port%3A8089" class="crop-text text-dark">8089</a><span class="u-pull-right">695</span>
+
+</li>
+
+<li class="normalize flex justify-content-between"><a href="/search?query=phone+port%3A80" class="crop-text text-dark">80</a><span class="u-pull-right">640</span>
+
+</li>
+
+<li><a href="/search/facet?query=phone&amp;facet=port">More...</a>
+
+</li>
+
+</ul>
+
+<h6>Top Organizations</h6>
+
+<ul>
+
+<li class="normalize flex justify-content-between"><a href="/search?query=phone+org%3A%22Telecom+Italia+S.p.A.%22" class="crop-text text-dark">Telecom Italia S.p.A.</a><span class="u-pull-right">119,758</span>
+
+</li>
+
+<li class="normalize flex justify-content-between"><a href="/search?query=phone+org%3A%22Telecom+Italia+S.p.A.+TIN+EASY+LITE%22" class="crop-text text-dark">Telecom Italia S.p.A. TIN EASY LITE</a><span class="u-pull-right">67,728</span>
+
+</li>
+
+<li class="normalize flex justify-content-between"><a href="/search?query=phone+org%3A%22Telecom+Italia+S.p.A.IPTV+Broadband+Services%22" class="crop-text text-dark">Telecom Italia S.p.A.IPTV Broadband Services</a><span class="u-pull-right">1,579</span>
+
+</li>
+
+<li class="normalize flex justify-content-between"><a href="/search?query=phone+org%3A%22UNIVERSIDADE+ESTADUAL+PAULISTA%22" class="crop-text text-dark">UNIVERSIDADE ESTADUAL PAULISTA</a><span class="u-pull-right">868</span>
+
+</li>
+
+<li class="normalize flex justify-content-between"><a href="/search?query=phone+org%3A%22Telecom+Italia+S.p.A%22" class="crop-text text-dark">Telecom Italia S.p.A</a><span class="u-pull-right">823</span>
+
+</li>
+
+<li><a href="/search/facet?query=phone&amp;facet=org">More...</a>
+
+</li>
+
+</ul>
+
+<h6>Top Products</h6>
+
+<ul>
+
+<li class="normalize flex justify-content-between"><a href="/search?query=phone+product%3A%22lighttpd%22" class="crop-text text-dark">lighttpd</a><span class="u-pull-right">3,482</span>
+
+</li>
+
+<li class="normalize flex justify-content-between"><a href="/search?query=phone+product%3A%22Avtech+AVN801+network+camera%22" class="crop-text text-dark">Avtech AVN801 network camera</a><span class="u-pull-right">1,366</span>
+
+</li>
+
+<li class="normalize flex justify-content-between"><a href="/search?query=phone+product%3A%22nginx%22" class="crop-text text-dark">nginx</a><span class="u-pull-right">1,132</span>
+
+</li>
+
+<li class="normalize flex justify-content-between"><a href="/search?query=phone+product%3A%22mini_httpd%22" class="crop-text text-dark">mini_httpd</a><span class="u-pull-right">948</span>
+
+</li>
+
+<li class="normalize flex justify-content-between"><a href="/search?query=phone+product%3A%22Apache+httpd%22" class="crop-text text-dark">Apache httpd</a><span class="u-pull-right">941</span>
+
+</li>
+
+<li><a href="/search/facet?query=phone&amp;facet=product">More...</a>
+
+</li>
+
+</ul>
+
+<h6>Top Operating Systems</h6>
+
+<ul>
+
+<li class="normalize flex justify-content-between"><a href="/search?query=phone+os%3A%22Windows%22" class="crop-text text-dark">Windows</a><span class="u-pull-right">317</span>
+
+</li>
+
+<li class="normalize flex justify-content-between"><a href="/search?query=phone+os%3A%22Linux%22" class="crop-text text-dark">Linux</a><span class="u-pull-right">155</span>
+
+</li>
+
+<li class="normalize flex justify-content-between"><a href="/search?query=phone+os%3A%22MikroTik+RouterOS+6.48.4%22" class="crop-text text-dark">MikroTik RouterOS 6.48.4</a><span class="u-pull-right">64</span>
+
+</li>
+
+<li class="normalize flex justify-content-between"><a href="/search?query=phone+os%3A%22MikroTik+RouterOS+7.7%22" class="crop-text text-dark">MikroTik RouterOS 7.7</a><span class="u-pull-right">34</span>
+
+</li>
+
+<li class="normalize flex justify-content-between"><a href="/search?query=phone+os%3A%22MikroTik+RouterOS+6.49.6%22" class="crop-text text-dark">MikroTik RouterOS 6.49.6</a><span class="u-pull-right">30</span>
+
+</li>
+
+<li><a href="/search/facet?query=phone&amp;facet=os">More...</a>
+
+</li>
+
+</ul>
+
+</div>
+
+<div class="nine columns">
+
+<div id="shodan-links"><a href="/search/report?query=phone" class="text-secondary card-orange"><i class="far fa-analytics  fa-fw "></i>&nbsp;View Report</a>
+
+<a href="https://images.shodan.io/?query=phone" class="text-secondary card-purple"><i class="far fa-images  fa-fw "></i>&nbsp;Browse Images</a><a href="https://maps.shodan.io/#16.720385051693988/3.515625/3/satellite/phone" class="text-secondary card-light-green"><i class="far fa-map  fa-fw "></i>&nbsp;View on Map</a>
+
+</div>
+
+<div style="margin-bottom: 10px; padding-left:20px" class="bg-light"><strong>Partner Spotlight:&nbsp;</strong>Looking for a place to store all the Shodan data? Check out&nbsp;<a href="https://www.gravwell.io/community-edition" style="font-weight:bold" target="_blank" rel="noopener">Gravwell</a>
+
+</div>
+
+<div class="result">
+
+<div class="timestamp u-pull-right text-secondary normalize">2023-03-03T10:00:21.991935</div>
+
+<div class="heading"><a href="/host/87.1.118.242" class="title text-dark">87.1.118.242</a>
+
+</div>
+
+<div class="container u-full-width">
+
+ <div class="row">
+
+<div class="two columns result-details">
+
+<ul>
+
+<li class="hostnames text-secondary">host-87-1-118-242.retail.telecomitalia.it</li>
+
+<li><a href="/search?query=phone+org%3A%22Telecom+Italia+S.p.A.+TIN+EASY+LITE%22" class="filter-link filter-org">Telecom Italia S.p.A. TIN EASY LITE</a>
+
+</li>
+
+<li><img src="/static/flags/16/IT.png" title="Italy" width="16" height="16" class="flag" /><a href="/search?query=phone+country%3A%22IT%22" class="filter-link text-dark">Italy</a>,&nbsp;<a href="/search?query=phone+city%3A%22Catanzaro%22" class="filter-link text-dark">Catanzaro</a>
+
+</li>
+
+</ul>
+
+</div>
+
+<div class="columns ten">
+
+<pre>SIP/2.0 500 Server Internal Error
+
+From: &lt;sip:nm@nm;user=<strong class="text-danger">phone</strong>&gt;;tag=root
+
+To: &lt;sip:nm2@nm2;user=<strong class="text-danger">phone</strong>&gt;;tag=1a8f9d0-9482e5f7-c592f8dc-5fbcc66c-13fe3fda-C51D86
+
+Call-ID: 50000
+
+CSeq: 42 OPTIONS
+
+Via: SIP/2.0/UDP nm;received=224.6.79.65;rport=26810;branch=foo
+
+Supported: replaces,100rel
+
+Allow: INVI...</pre>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="result">
+
+<div class="timestamp u-pull-right text-secondary normalize">2023-03-03T10:00:02.632221</div>
+
+<div class="heading"><a href="/host/62.211.88.108" class="title text-dark">62.211.88.108</a>
+
+</div>
+
+<div class="container u-full-width">
+
+<div class="row">
+
+<div class="two columns result-details">
+
+<ul>
+
+<li class="hostnames text-secondary">host-62-211-88-108.retail.telecomitalia.it</li>
+
+<li class="hostnames text-secondary">host-62-211-88-108.pool62211.interbusiness.it</li>
+
+<li><a href="/search?query=phone+org%3A%22Telecom+Italia+S.p.A.%22" class="filter-link filter-org">Telecom Italia S.p.A.</a>
+
+</li>
+
+<li><img src="/static/flags/16/IT.png" title="Italy" width="16" height="16" class="flag" /><a href="/search?query=phone+country%3A%22IT%22" class="filter-link text-dark">Italy</a>,&nbsp;<a href="/search?query=phone+city%3A%22Brescia%22" class="filter-link text-dark">Brescia</a>
+
+</li>
+
+</ul>
+
+</div>
+
+<div class="columns ten">
+
+<pre>SIP/2.0 500 Server Internal Error
+
+From: &lt;sip:nm@nm;user=<strong class="text-danger">phone</strong>&gt;;tag=root
+
+To: &lt;sip:nm2@nm2;user=<strong class="text-danger">phone</strong>&gt;;tag=19ee1f8-76856a0-cf92fa65-77e283f7-3207db98-C8A3AA
+
+Call-ID: 50000
+
+CSeq: 42 OPTIONS
+
+Via: SIP/2.0/UDP nm;received=224.243.206.140;rport=26810;branch=foo
+
+Supported: replaces,100rel
+
+Allow: I...</pre>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="result">
+
+<div class="timestamp u-pull-right text-secondary normalize">2023-03-03T09:59:09.578811</div>
+
+<div class="heading"><a href="/host/80.116.79.173" class="title text-dark">80.116.79.173</a>
+
+</div>
+
+<div class="container u-full-width">
+
+<div class="row">
+
+<div class="two columns result-details">
+
+<ul>
+
+<li class="hostnames text-secondary">host-80-116-79-173.pool80116.interbusiness.it</li>
+
+<li class="hostnames text-secondary">host-80-116-79-173.retail.telecomitalia.it</li>
+
+<li><a href="/search?query=phone+org%3A%22Telecom+Italia+S.p.A.+TIN+EASY+LITE%22" class="filter-link filter-org">Telecom Italia S.p.A. TIN EASY LITE</a>
+
+</li>
+
+<li><img src="/static/flags/16/IT.png" title="Italy" width="16" height="16" class="flag" /><a href="/search?query=phone+country%3A%22IT%22" class="filter-link text-dark">Italy</a>,&nbsp;<a href="/search?query=phone+city%3A%22Bergamo%22" class="filter-link text-dark">Bergamo</a>
+
+</li>
+
+</ul>
+
+</div>
+
+<div class="columns ten">
+
+<pre>SIP/2.0 500 Server Internal Error
+
+From: &lt;sip:nm@nm;user=<strong class="text-danger">phone</strong>&gt;;tag=root
+
+To: &lt;sip:nm2@nm2;user=<strong class="text-danger">phone</strong>&gt;;tag=19d9890-5788afad-fc7929d3-23f7410c-3202d163-CBF472
+
+Call-ID: 50000
+
+CSeq: 42 OPTIONS
+
+Via: SIP/2.0/UDP nm;received=224.73.3.24;rport=26810;branch=foo
+
+Supported: replaces,100rel
+
+Allow: INVI...</pre>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="result">
+
+<div class="timestamp u-pull-right text-secondary normalize">2023-03-03T09:58:51.332748</div>
+
+<div class="heading"><a href="/host/82.50.157.163" class="title text-dark">82.50.157.163</a>
+
+</div>
+
+<div class="container u-full-width">
+
+<div class="row">
+
+<div class="two columns result-details">
+
+<ul>
+
+<li class="hostnames text-secondary">host-82-50-157-163.retail.telecomitalia.it</li>
+
+<li><a href="/search?query=phone+org%3A%22Telecom+Italia+S.p.A.+TIN+EASY+LITE%22" class="filter-link filter-org">Telecom Italia S.p.A. TIN EASY LITE</a>
+
+</li>
+
+<li><img src="/static/flags/16/IT.png" title="Italy" width="16" height="16" class="flag" /><a href="/search?query=phone+country%3A%22IT%22" class="filter-link text-dark">Italy</a>,&nbsp;<a href="/search?query=phone+city%3A%22Brescia%22" class="filter-link text-dark">Brescia</a>
+
+</li>
+
+</ul>
+
+</div>
+
+<div class="columns ten">
+
+<pre>SIP/2.0 500 Server Internal Error
+
+From: &lt;sip:nm@nm;user=<strong class="text-danger">phone</strong>&gt;;tag=root
+
+To: &lt;sip:nm2@nm2;user=<strong class="text-danger">phone</strong>&gt;;tag=1a5fc58-172e74e6-95c7d0cd-1d01601f-30ea28a6-C3BD88
+
+Call-ID: 50000
+
+CSeq: 42 OPTIONS
+
+Via: SIP/2.0/UDP nm;received=224.228.12.84;rport=26810;branch=foo
+
+Supported: replaces,100rel
+
+Allow: IN...</pre>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="result">
+
+<div class="timestamp u-pull-right text-secondary normalize">2023-03-03T09:58:31.970616</div>
+
+<div class="heading"><a href="/host/82.60.119.208" class="title text-dark">82.60.119.208</a>
+
+</div>
+
+<div class="container u-full-width">
+
+<div class="row">
+
+<div class="two columns result-details">
+
+<ul>
+
+<li class="hostnames text-secondary">host-82-60-119-208.retail.telecomitalia.it</li>
+
+<li><a href="/search?query=phone+org%3A%22Telecom+Italia+S.p.A.%22" class="filter-link filter-org">Telecom Italia S.p.A.</a>
+
+</li>
+
+<li><img src="/static/flags/16/IT.png" title="Italy" width="16" height="16" class="flag" /><a href="/search?query=phone+country%3A%22IT%22" class="filter-link text-dark">Italy</a>,&nbsp;<a href="/search?query=phone+city%3A%22Padova%22" class="filter-link text-dark">Padova</a>
+
+</li>
+
+</ul>
+
+</div>
+
+<div class="columns ten">
+
+<pre>SIP/2.0 500 Server Internal Error
+
+From: &lt;sip:nm@nm;user=<strong class="text-danger">phone</strong>&gt;;tag=root
+
+To: &lt;sip:nm2@nm2;user=<strong class="text-danger">phone</strong>&gt;;tag=19ecec0-c4e621e9-97317c35-666ed77d-271040e8-EDF41A
+
+Call-ID: 50000
+
+CSeq: 42 OPTIONS
+
+Via: SIP/2.0/UDP nm;received=224.80.243.88;rport=26810;branch=foo
+
+Supported: replaces,100rel
+
+Allow: IN...</pre>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="result">
+
+<div class="timestamp u-pull-right text-secondary normalize">2023-03-03T09:58:09.235789</div>
+
+<div class="heading"><a href="/host/79.47.49.215" class="title text-dark">79.47.49.215</a>
+
+</div>
+
+<div class="container u-full-width">
+
+<div class="row">
+
+<div class="two columns result-details">
+
+<ul>
+
+<li class="hostnames text-secondary">host-79-47-49-215.retail.telecomitalia.it</li>
+
+<li><a href="/search?query=phone+org%3A%22Telecom+Italia+S.p.A.%22" class="filter-link filter-org">Telecom Italia S.p.A.</a>
+
+</li>
+
+<li><img src="/static/flags/16/IT.png" title="Italy" width="16" height="16" class="flag" /><a href="/search?query=phone+country%3A%22IT%22" class="filter-link text-dark">Italy</a>,&nbsp;<a href="/search?query=phone+city%3A%22Bologna%22" class="filter-link text-dark">Bologna</a>
+
+</li>
+
+</ul>
+
+</div>
+
+<div class="columns ten">
+
+<pre>SIP/2.0 500 Server Internal Error
+
+From: &lt;sip:nm@nm;user=<strong class="text-danger">phone</strong>&gt;;tag=root
+
+To: &lt;sip:nm2@nm2;user=<strong class="text-danger">phone</strong>&gt;;tag=1a690f8-d4ddef68-dd2fe24b-63121cbd-d2164285-CC2A1C
+
+Call-ID: 50000
+
+CSeq: 42 OPTIONS
+
+Via: SIP/2.0/UDP nm;received=224.6.79.65;rport=26810;branch=foo
+
+Supported: replaces,100rel
+
+Allow: INVI...</pre>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="result">
+
+<div class="timestamp u-pull-right text-secondary normalize">2023-03-03T09:57:57.745667</div>
+
+<div class="heading"><a href="/host/87.21.125.57" class="title text-dark">87.21.125.57</a>
+
+</div>
+
+<div class="container u-full-width">
+
+<div class="row">
+
+<div class="two columns result-details">
+
+<ul>
+
+<li class="hostnames text-secondary">host-87-21-125-57.retail.telecomitalia.it</li>
+
+<li><a href="/search?query=phone+org%3A%22Telecom+Italia+S.p.A.+TIN+EASY+LITE%22" class="filter-link filter-org">Telecom Italia S.p.A. TIN EASY LITE</a>
+
+</li>
+
+<li><img src="/static/flags/16/IT.png" title="Italy" width="16" height="16" class="flag" /><a href="/search?query=phone+country%3A%22IT%22" class="filter-link text-dark">Italy</a>,&nbsp;<a href="/search?query=phone+city%3A%22Florence%22" class="filter-link text-dark">Florence</a>
+
+</li>
+
+</ul>
+
+</div>
+
+<div class="columns ten">
+
+<pre>SIP/2.0 500 Server Internal Error
+
+From: &lt;sip:nm@nm;user=<strong class="text-danger">phone</strong>&gt;;tag=root
+
+To: &lt;sip:nm2@nm2;user=<strong class="text-danger">phone</strong>&gt;;tag=19f51c0-1f210bb3-13a69e47-693cec8a-218efc04-B0CCC0
+
+Call-ID: 50000
+
+CSeq: 42 OPTIONS
+
+Via: SIP/2.0/UDP nm;received=224.39.83.169;rport=26810;branch=foo
+
+Supported: replaces,100rel
+
+Allow: IN...</pre>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="result">
+
+<div class="timestamp u-pull-right text-secondary normalize">2023-03-03T09:57:55.519755</div>
+
+<div class="heading"><a href="/host/79.21.206.224" class="title text-dark">79.21.206.224</a>
+
+</div>
+
+<div class="container u-full-width">
+
+<div class="row">
+
+<div class="two columns result-details">
+
+<ul>
+
+<li class="hostnames text-secondary">host-79-21-206-224.retail.telecomitalia.it</li>
+
+<li><a href="/search?query=phone+org%3A%22Telecom+Italia+S.p.A.%22" class="filter-link filter-org">Telecom Italia S.p.A.</a>
+
+</li>
+
+<li><img src="/static/flags/16/IT.png" title="Italy" width="16" height="16" class="flag" /><a href="/search?query=phone+country%3A%22IT%22" class="filter-link text-dark">Italy</a>,&nbsp;<a href="/search?query=phone+city%3A%22Brescia%22" class="filter-link text-dark">Brescia</a>
+
+</li>
+
+</ul>
+
+</div>
+
+<div class="columns ten">
+
+<pre>SIP/2.0 500 Server Internal Error
+
+From: &lt;sip:nm@nm;user=<strong class="text-danger">phone</strong>&gt;;tag=root
+
+To: &lt;sip:nm2@nm2;user=<strong class="text-danger">phone</strong>&gt;;tag=1a5c0a0-9ce19464-6089c6c1-60f034e-7a3514b-1A497A
+
+Call-ID: 50000
+
+CSeq: 42 OPTIONS
+
+Via: SIP/2.0/UDP nm;received=224.254.188.41;rport=26810;branch=foo
+
+Supported: replaces,100rel
+
+Allow: INV...</pre>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="result">
+
+<div class="timestamp u-pull-right text-secondary normalize">2023-03-03T09:57:45.721137</div>
+
+<div class="heading"><a href="/host/192.145.223.239" class="title text-dark">192.145.223.239</a><a href="http://192.145.223.239:8089" target="_blank" rel="noopener noreferrer nofollow" class="text-danger"><i class="far fa-external-link  fa-fw "></i></a>
+
+</div>
+
+<div class="container u-full-width">
+
+ <div class="row">
+
+<div class="two columns result-details">
+
+<ul>
+
+<li><a href="/search?query=phone+org%3A%22ULTRALINK+SERVICOS+DE+COMUNICACAO+LTDA%22" class="filter-link filter-org">ULTRALINK SERVICOS DE COMUNICACAO LTDA</a>
+
+</li>
+
+<li><img src="/static/flags/16/BR.png" title="Brazil" width="16" height="16" class="flag" /><a href="/search?query=phone+country%3A%22BR%22" class="filter-link text-dark">Brazil</a>,&nbsp;<a href="/search?query=phone+city%3A%22Sobral%22" class="filter-link text-dark">Sobral</a>
+
+</li>
+
+</ul>
+
+</div>
+
+<div class="columns ten">
+
+<pre>HTTP/1.1 200 OK
+
+Date: Fri, 03 Mar 2023 11:57:45 GMT
+
+Server: Apache/2.4.25 (Debian)
+
+Vary: Accept-Encoding
+
+MKAUTH: HOTSITE
+
+Transfer-Encoding: chunked
+
+Content-Type: text/html
+
+
+
+4826
+
+&lt;!DOCTYPE HTML&gt;
+
+&lt;html&gt;
+
+&lt;head&gt;
+
+&lt;title&gt;CmNet Fibra LTDA&lt;/title&gt;
+
+
+
+&lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; href=&quot;im...</pre>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="result">
+
+<div class="timestamp u-pull-right text-secondary normalize">2023-03-03T09:57:40.104949</div>
+
+<div class="heading"><a href="/host/79.63.105.200" class="title text-dark">79.63.105.200</a>
+
+</div>
+
+<div class="container u-full-width">
+
+<div class="row">
+
+<div class="two columns result-details">
+
+<ul>
+
+<li class="hostnames text-secondary">host-79-63-105-200.business.telecomitalia.it</li>
+
+<li><a href="/search?query=phone+org%3A%22Telecom+Italia+S.p.A.%22" class="filter-link filter-org">Telecom Italia S.p.A.</a>
+
+</li>
+
+<li><img src="/static/flags/16/IT.png" title="Italy" width="16" height="16" class="flag" /><a href="/search?query=phone+country%3A%22IT%22" class="filter-link text-dark">Italy</a>,&nbsp;<a href="/search?query=phone+city%3A%22Rome%22" class="filter-link text-dark">Rome</a>
+
+</li>
+
+</ul>
+
+</div>
+
+<div class="columns ten">
+
+<pre>SIP/2.0 500 Server Internal Error
+
+From: &lt;sip:nm@nm;user=<strong class="text-danger">phone</strong>&gt;;tag=root
+
+To: &lt;sip:nm2@nm2;user=<strong class="text-danger">phone</strong>&gt;;tag=19eeff0-83751fcf-5274d3a9-2608bf6c-38719f06-63E758
+
+Call-ID: 50000
+
+CSeq: 42 OPTIONS
+
+Via: SIP/2.0/UDP nm;received=224.6.79.65;rport=26810;branch=foo
+
+Supported: replaces,timer
+
+Allow: INVIT...</pre>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="pagination"><a href="/search?query=phone&amp;page=2" class="button">Next</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<br />
+
+<div class="container u-full-width bg-solid"><br /><br />
+
+<div class="container">
+
+<div class="row">
+
+<div class="three columns">
+
+<h6 class="grid-heading">Products</h6>
+
+<ul>
+
+<li><a href="https://monitor.shodan.io" class="light">Monitor</a>
+
+</li>
+
+<li><a href="https://beta.shodan.io" class="light">Search Engine</a>
+
+</li>
+
+<li><a href="https://developer.shodan.io" class="light">Developer API</a>
+
+</li>
+
+<li><a href="https://maps.shodan.io" class="light">Maps</a>
+
+</li>
+
+</ul>
+
+</div>
+
+<div class="three columns">
+
+<h6 style="visibility:hidden" class="grid-heading">&nbsp;</h6>
+
+<ul>
+
+<li><a href="https://enterprise.shodan.io" class="light">Bulk Data</a>
+
+</li>
+
+<li><a href="https://images.shodan.io" class="light">Images</a>
+
+</li>
+
+<li><a href="https://snippets.shodan.io" class="light">Snippets</a>
+
+</li>
+
+</ul>
+
+</div>
+
+<div class="three columns">
+
+<h6 class="grid-heading">Pricing</h6>
+
+<ul>
+
+<li><a href="https://www.shodan.io/store/member" class="light">Membership</a>
+
+</li>
+
+<li><a href="https://developer.shodan.io/pricing" class="light">API Subscriptions</a>
+
+</li>
+
+ <li><a href="https://enterprise.shodan.io" class="light">Enterprise</a>
+
+</li>
+
+</ul>
+
+</div>
+
+<div class="three columns">
+
+<h6 class="grid-heading">Contact Us</h6>
+
+<ul>
+
+<li><a href="mailto:support@shodan.io" class="light">support@shodan.io</a>
+
+</li>
+
+<li>
+
+<h5><a href="https://www.linkedin.com/company/shodan" aria-label="Linkedin" data-balloon-disable="data-balloon-disable" class="text-secondary"><i class="fab fa-linkedin   "></i></a>&nbsp;&nbsp;<a href="https://mastodon.shodan.io/@shodan" aria-label="Mastodon" data-balloon-disable="data-balloon-disable" class="text-secondary"><i class="fab fa-mastodon   "></i></a>&nbsp;&nbsp;<a href="https://twitter.com/shodanhq" aria-label="Twitter" data-balloon-disable="data-balloon-disable" class="text-secondary"><i class="fab fa-twitter   "></i></a>&nbsp;&nbsp;<a href="https://www.facebook.com/shodan.io" aria-label="Facebook" data-balloon-disable="data-balloon-disable" class="text-secondary"><i class="fab fa-facebook   "></i></a>
+
+</h5>
+
+</li>
+
+</ul>
+
+<p class="light">Shodan &reg; - All rights reserved</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="/static/jquery/jquery-3.4.1.slim.min.js"></script>
+
+<script src="/static/jquery/jquery-jvectormap-1.2.2.min.js"></script>
+
+<script src="/static/jquery/jquery-jvectormap-world-mill-en.js"></script>
+
+<script>(function() {
+
+    function initWorldMap() {
+
+        $worldmap = $('#worldmap')
+
+        if (!$worldmap.length) {
+
+            return;
+
+        }
+
+
+
+        let worldmapdata = {"IT": 192371, "US": 3270, "CN": 2352, "MY": 1433, "BR": 1409, "KR": 1165, "TH": 1097, "RU": 1004, "DE": 748, "HK": 588, "LK": 491, "VN": 408, "TW": 393, "ID": 388, "SG": 370, "MX": 360, "GB": 351, "JP": 314, "ZA": 298, "BN": 279, "CA": 265, "FR": 228, "SA": 216, "BD": 212, "AU": 202, "NL": 202, "SE": 201, "IN": 194, "RO": 153, "TR": 152, "HU": 149, "UA": 104, "ES": 103, "IE": 100, "CH": 94, "PL": 93, "IR": 77, "DO": 68, "PT": 68, "IL": 57, "BG": 52, "AR": 49, "DK": 49, "BE": 48, "CZ": 46, "MA": 45, "MU": 41, "BY": 38, "EE": 38, "PK": 36, "CO": 33, "FI": 33, "NO": 32, "RS": 32, "HR": 30, "CL": 29, "GH": 29, "AT": 27, "SK": 26, "GR": 25, "PH": 25, "NZ": 23, "KH": 22, "KZ": 21, "KW": 20, "LT": 20, "SI": 20, "AE": 19, "PR": 18, "NG": 17, "PE": 17, "LV": 16, "BF": 13, "NI": 13, "PA": 13, "AO": 12, "MO": 12, "EC": 11, "UY": 11, "VE": 9, "AM": 8, "BH": 8, "AZ": 7, "IS": 7, "LB": 6, "MD": 6, "RE": 6, "UZ": 6, "CY": 5, "LU": 5, "PY": 5, "QA": 5, "EG": 4, "GE": 4, "IQ": 4, "KG": 4, "BW": 3, "CD": 3, "CR": 3, "GP": 3};
+
+        $worldmap.empty();
+
+        $worldmap.vectorMap({
+
+            map: 'world_mill_en',
+
+            backgroundColor: 'transparent',
+
+            zoomOnScroll: false,
+
+            regionStyle: {
+
+                initial: {
+
+                    'stroke': '#404040',
+
+                    'stroke-width': 0.5,
+
+                    'stroke-opacity': 1,
+
+                },
+
+            },
+
+            series: {
+
+                regions: [{
+
+                    values: worldmapdata,
+
+                    scale: ['#FFDBDB', '#C60F13'],
+
+                    normalizeFunction: 'polynomial',
+
+                }],
+
+            },
+
+            onRegionLabelShow: function(event, label, code) {
+
+                let count = worldmapdata[code] || 0;
+
+                label.html(
+
+                    '<b>' + label.text() + '</b><br/>' +
+
+                    'Hosts: ' + count.toLocaleString(),
+
+                );
+
+            }
+
+        });
+
+    }
+
+
+
+    setTimeout(initWorldMap, 500);
+
+})()
+
+</script>
+
+</body>
+
+</html>
+
+
+
